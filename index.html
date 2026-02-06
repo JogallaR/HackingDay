@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Medieval - El Secreto</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Fuente Medieval -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=MedievalSharp&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="main-container">
+        <h1 class="page-title">Macarrònia</h1>
+
+        <div class="content-row">
+            <div class="map-frame">
+                <!-- Contenedor relativo para posicionar la oscuridad SOBRE la imagen -->
+                <div class="map-wrapper" id="map-wrapper">
+                    <!-- Tu imagen de mapa -->
+                    <img src="img/Mapa_Color.jpg" alt="Mapa Medieval" class="user-map" id="user-map">
+
+                    <!-- Capa de oscuridad exclusiva para el mapa -->
+                    <div class="map-darkness" id="map-darkness"></div>
+
+                    <!-- Cursor personalizado de antorcha -->
+                    <div class="torch-cursor" id="torch-cursor"></div>
+
+                    <!-- 
+                         NUEVO: Capa para el MARCO PNG (con fondo transparente).
+                         Si creas una imagen llamada 'marco.png' que solo tenga el borde,
+                         se mostrará ENCIMA de la oscuridad.
+                    -->
+                    <img src="img/Marc.png" class="frame-overlay" onerror="this.style.display='none'">
+                </div>
+            </div>
+
+            <div class="riddle-container">
+
+                <h2>L'Endevinalla del Guardià</h2>
+                <p>
+                    El mapa de la esquerra no mostra camins,
+                    sinó decisions.
+                </p>
+                <p>
+                    El mapa resta ocult a les ombres.
+                    Només el foc pot revelar el camí.
+                </p>
+                <p>
+                    Quan la llum travessa la foscor,
+                    els noms apareixen un rere l'altre
+                    a la esquerra del mapa.
+                </p>
+                <p>
+                    Cinc camins es mostren,
+                    però només un ordre és veritable.
+                </p>
+
+                <div class="form-group">
+                    <input type="text" id="riddle-answer" placeholder="Escriu la teva resposta..." autocomplete="off">
+                    <button id="riddle-submit">Revela el Destí</button>
+                </div>
+
+                <div id="secret-code" class="secret-code hidden">
+                    <p>El destí s'obre davant teu.</p>
+                    <div class="code-box">CODI SEGUENT PROVA</div>
+                </div>
+                <div id="error-msg" class="error-msg hidden">
+                    Segueix la revelació,
+                    pren la primera lletra de cada pas
+                    i desxifra el símbol final.
+                </div>
+            </div>
+        </div>
+
+        <p class="instruction-text">Utilitza la teva antorcha per explorar el mapa i descobreix el destí.</p>
+    </div>
+
+    <!-- Script principal -->
+    <script src="script.js"></script>
+</body>
+
+</html>
