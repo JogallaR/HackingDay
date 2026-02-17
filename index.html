@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mapa Medieval - El Secreto</title>
+    <title>Macarrònia</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Fuente Medieval -->
+    <link rel="icon" type="image/png" href="img/Mapa_Color.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=MedievalSharp&display=swap"
@@ -15,29 +15,24 @@
 
 <body>
     <div class="main-container">
-        <h1 class="page-title">Macarrònia</h1>
+        <h1 class="page-title">Prova 2</h1>
 
         <div class="content-row">
             <div class="map-frame">
-                <!-- Contenedor relativo para posicionar la oscuridad SOBRE la imagen -->
+
                 <div class="map-wrapper" id="map-wrapper">
-                    <!-- Tu imagen de mapa -->
+
                     <img src="img/Mapa_Color.jpg" alt="Mapa Medieval" class="user-map" id="user-map">
 
-                    <!-- Capa de oscuridad exclusiva para el mapa -->
                     <div class="map-darkness" id="map-darkness"></div>
 
-                    <!-- Cursor personalizado de antorcha -->
                     <div class="torch-cursor" id="torch-cursor"></div>
 
-                    <!-- 
-                         NUEVO: Capa para el MARCO PNG (con fondo transparente).
-                         Si creas una imagen llamada 'marco.png' que solo tenga el borde,
-                         se mostrará ENCIMA de la oscuridad.
-                    -->
                     <img src="img/Marc.png" class="frame-overlay" onerror="this.style.display='none'">
                 </div>
             </div>
+            
+              <p style="display: none;">Paraula secreta: "Macarrufla"</p>
 
             <div class="riddle-container">
 
@@ -67,7 +62,7 @@
 
                 <div id="secret-code" class="secret-code hidden">
                     <p>El destí s'obre davant teu.</p>
-                    <div class="code-box">CODI SEGUENT PROVA</div>
+                    <div class="code-box">No miris només la façana del pergamí. Explora’n les entranyes si vols trobar la clau de la següent prova.</div>
                 </div>
                 <div id="error-msg" class="error-msg hidden">
                     Segueix la revelació,
@@ -76,11 +71,12 @@
                 </div>
             </div>
         </div>
+      
+
 
         <p class="instruction-text">Utilitza la teva antorcha per explorar el mapa i descobreix el destí.</p>
     </div>
 
-    <!-- Script principal -->
     <script src="script.js"></script>
 </body>
 
